@@ -26,3 +26,26 @@ describe "actionForm directive", ->
 
     )
     expect(ele.html()).toContain('type="text" name="productCode"')
+  it "check radio buttons by default if their\
+      selected attribute is set to true", ->
+    scope.$apply(->
+      scope.action =
+        "fields": [
+          {
+            "type":"radio"
+            "value": [
+              {
+                "value": "value1"
+                "selected": true
+              }
+              {
+                "value": "value2"
+              }
+            ]
+          }
+        ]
+    )
+    expect(ele.find('input[value="value1"]')
+      .first().attr('checked')).toBe('checked')
+    expect(ele.find('input[value="value2"]')
+      .first().attr('checked')).toBeUndefined()

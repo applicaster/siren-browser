@@ -7,7 +7,8 @@ form(ng-submit='actionFromCtrl.submit(action)')
           input(
             type="{{field.type}}",
             name="{{field.name}}",
-            value="{{option.value}}"
+            value="{{option.value}}",
+            ng-checked="option.selected"
           )
           | {{option.title}}
     div.form-group(ng-if="field.type == 'text' || field.type == 'number'")
