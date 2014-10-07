@@ -37,7 +37,7 @@ gulp test
 ```
 
 ## Contributing
-Please follow these[Commit Message Conventions](https://github.com/camunda/camunda.org/blob/master/COMMIT_MESSAGES.md).
+Please follow these [Commit Message Conventions](https://github.com/camunda/camunda.org/blob/master/COMMIT_MESSAGES.md).
 
 
 ## Environment Architecture
