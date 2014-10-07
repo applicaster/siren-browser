@@ -1,0 +1,20 @@
+form(ng-submit='actionFromCtrl.submit(action)')
+  div(ng-repeat="field in action.fields")
+    div.form-group(ng-if="field.type == 'checkbox'  || field.type == 'radio'")
+      label {{field.title}}
+      div.checkbox.radio(ng-repeat="option in field.value")
+        label
+          input(
+            type="{{field.type}}",
+            name="{{field.name}}",
+            value="{{option.value}}"
+          )
+          | {{option.title}}
+    div.form-group(ng-if="field.type == 'text' || field.type == 'number'")
+      label {{field.title}}
+      input.form-control(
+        type="{{field.type}}",
+        name="{{field.name}}",
+        value="{{field.value}}"
+      )
+  input(type="submit")

@@ -1,0 +1,13 @@
+.navbar.navbar-inverse.navbar-fixed-top(role='navigation', style="background-color:maroon;")
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#') Siren API Browser
+.container(style="padding-top:60px;")
+  .row
+    .col-md-12
+      div(ui-view='')

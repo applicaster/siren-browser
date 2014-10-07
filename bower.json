@@ -1,0 +1,28 @@
+{
+  "name": "s-brower",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "gavriguy <gavri.guy@gmail.com>"
+  ],
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.25",
+    "angular-mocks": "~1.2.25",
+    "angular-bootstrap": "~0.11.2"
+  }
+}

@@ -1,0 +1,9 @@
+modal-header
+  h3.modal-title {{actionModalCtrl.action.name}}
+.modal-body
+  tabset
+    tab(heading='Form')
+      action-form(ng-model="actionModalCtrl.action")
+    tab(heading='Source')
+      pre.
+        | {{ actionModalCtrl.action | prettify }}

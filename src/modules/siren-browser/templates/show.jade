@@ -1,0 +1,66 @@
+.row
+  .col-md-12
+    form.form-horizontal
+      .form-group
+        label.col-sm-2.control-label(for='url') Entity URI:
+        .col-sm-9
+          input.form-control#url(type='text', ng-model='showCtrl.url')
+        .col-sm-1
+          button.form-control.btn.btn-primary(ui-sref="siren-browser({url:showCtrl.url})") Go
+#response.row
+  .col-md-4
+    #class(ng-show='showCtrl.class')
+      h3 Class
+      pre.
+        {{showCtrl.class}}
+    #properties(ng-show='showCtrl.properties')
+      h3 Properties
+      pre.
+        {{showCtrl.properties | prettify}}
+    #links(ng-show='showCtrl.links.length')
+      h3 Links
+      ul
+        li(ng-repeat='link in showCtrl.links')
+          a(href="#/siren-browser?url={{ link.href | encodeURIComponent }}") {{link.rel}}
+  .col-md-6
+    #actions(ng-show='showCtrl.actions.length')
+      h3 Actions
+      accordion(close-others='true')
+        accordion-group(ng-repeat='action in showCtrl.actions', is-open='$first')
+          accordion-heading
+            span(ng-show='action.title') {{action.title}}
+            span(ng-show='!action.title') {{action.name}}
+          tabset
+            tab(heading='Form')
+              action-form(ng-model="action")
+            tab(heading='Source')
+              pre.
+                | {{ action | prettify }}
+    #entities(ng-show='showCtrl.entities.length')
+      h3 Entities
+      div
+        label.checkbox
+          input#oneAtATime(type='checkbox', ng-model='isOneAtATime')
+          | Open only one at a time
+      br
+      accordion(close-others='isOneAtATime')
+        accordion-group(ng-repeat='entity in showCtrl.entities', heading='class: {{entity.class}}', is-open='$first')
+          div(ng-show="entity.properties")
+            h4 Properties
+            pre
+              | {{entity.properties | prettify}}
+          div(ng-show='entity.links')
+            h4 Links
+            ul
+              li(ng-repeat='link in entity.links')
+                a(ui-sref="siren-browser({url:link.href})") {{link.rel}}
+          div(ng-show='entity.href')
+            | href:
+            a(ui-sref="siren-browser({url:entity.href})") {{entity.href}}
+          div(ng-show="entity.actions")
+            h4 Actions
+            .btn-group-vertical
+              button.btn.btn-default(
+                ng-repeat="action in entity.actions"
+                ng-click="showCtrl.openActionModal(action)"
+              ) Action {{action.name}}
