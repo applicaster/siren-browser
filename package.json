@@ -39,6 +39,6 @@
     "karma-jade-preprocessor": "0.0.11"
   },
   "devDependencies": {
-
+    "gulp-gh-pages": "^0.4.0"
   }
 }
