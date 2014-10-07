@@ -2,6 +2,10 @@
 Front end [Siren API](https://github.com/kevinswiber/siren) web browser.
 The work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser siren browsers.
 
+## Live demo
+
+[http://applicaster.github.io/siren-broswer/](http://applicaster.github.io/siren-broswer/)
+
 ## Why build a new one?
 * https://github.com/wurlinc/siren-browser - [isn't supported anymore](https://github.com/wurlinc/siren-browser/issues/4).
 * https://github.com/kevinswiber/siren-api-browser - Siren Action submission has some error and to change it caused a lot of major refactoring in the code. Another issue is the lack of sub-entities action support and lack of unit tests.
