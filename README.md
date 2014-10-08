@@ -1,4 +1,5 @@
-# Siren Browser
+# Siren Browser [![Build Status](https://travis-ci.org/applicaster/siren-broswer.svg?branch=master)](https://travis-ci.org/applicaster/siren-broswer) [![Dependency Status](https://david-dm.org/applicaster/siren-broswer.svg)](https://david-dm.org/applicaster/siren-broswer)
+
 Front end Siren API browser build in Angular
 
 
