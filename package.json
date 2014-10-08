@@ -36,7 +36,8 @@
     "karma-coffee-preprocessor": "^0.2.1",
     "webpack-dev-server": "^1.6.5",
     "karma-webpack": "^1.2.2",
-    "karma-jade-preprocessor": "0.0.11"
+    "karma-jade-preprocessor": "0.0.11",
+    "fs": "0.0.2"
   },
   "devDependencies": {
     "gulp-gh-pages": "^0.4.0"
