@@ -1,14 +1,10 @@
 # Siren Browser [![Build Status](https://travis-ci.org/applicaster/siren-broswer.svg?branch=master)](https://travis-ci.org/applicaster/siren-broswer) [![Dependency Status](https://david-dm.org/applicaster/siren-broswer.svg)](https://david-dm.org/applicaster/siren-broswer)
 
-Front end Siren API browser build in Angular
+Siren API Browser client for the web.
 
 
 ## Goal
 To have a production ready [Siren API](https://github.com/kevinswiber/siren) Browser that is fully tested and supports all Siren API features.
-
-
-
-The work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser siren browsers.
 
 
 ## Live demo
@@ -17,10 +13,10 @@ The work is based to some extent on both - https://github.com/wurlinc/siren-brow
 
 ## Why build a new one?
 
-The work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser siren browsers.
+This work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser Siren browsers.
 
 * https://github.com/wurlinc/siren-browser - [isn't actively supported](https://github.com/wurlinc/siren-browser/issues/4).
-* https://github.com/kevinswiber/siren-api-browser - Our browser is heavily inspired on @kevinswiber's work in terms of UI and some of the logics. Once we feel its stable enough we'll create a pull request and hope it can be treated as the 2.0 fork of @kevinswiber's implementation. Our browser has all the functionality of @kevinswiber's browser + test coverege and support for sub-entities actions inline.
+* https://github.com/kevinswiber/siren-api-browser - Our browser is heavily inspired on @kevinswiber's work in terms of UI and some of the logics. Once we feel it's stable enough we'll create a pull request and hope it can be treated as the 2.0 fork of @kevinswiber's implementation. Our browser has all the functionality of @kevinswiber's browser + test coverege and support for sub-entities actions inline.
 
 ## Environment setup
 * Make sure you have node.js installed.
