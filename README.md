@@ -1,14 +1,25 @@
 # Siren Browser
-Front end [Siren API](https://github.com/kevinswiber/siren) web browser.
+Front end Siren API browser build in Angular
+
+
+## Goal
+To have a production ready [Siren API](https://github.com/kevinswiber/siren) Browser that is fully tested and supports all Siren API features.
+
+
+
 The work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser siren browsers.
+
 
 ## Live demo
 
 [http://applicaster.github.io/siren-broswer/](http://applicaster.github.io/siren-broswer/)
 
 ## Why build a new one?
-* https://github.com/wurlinc/siren-browser - [isn't supported anymore](https://github.com/wurlinc/siren-browser/issues/4).
-* https://github.com/kevinswiber/siren-api-browser - Siren Action submission has some error and to change it caused a lot of major refactoring in the code. Another issue is the lack of sub-entities action support and lack of unit tests.
+
+The work is based to some extent on both - https://github.com/wurlinc/siren-browser, and https://github.com/kevinswiber/siren-api-browser siren browsers.
+
+* https://github.com/wurlinc/siren-browser - [isn't actively supported](https://github.com/wurlinc/siren-browser/issues/4).
+* https://github.com/kevinswiber/siren-api-browser - Our browser is heavily inspired on @kevinswiber's work in terms of UI and some of the logics. Once we feel its stable enough we'll create a pull request and hope it can be treated as the 2.0 fork of @kevinswiber's implementation. Our browser has all the functionality of @kevinswiber's browser + test coverege and support for sub-entities actions inline.
 
 ## Environment setup
 * Make sure you have node.js installed.
