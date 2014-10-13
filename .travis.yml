@@ -1,6 +1,17 @@
 language: node_js
 node_js:
   - "0.10"
+env:
+  global:
+   - GH_REF=github.com/applicaster/siren-broswer.git
+   - secure: k9P/Ca9CeJUV7JEsevM+bCGNrW1ur8l9PHaAXrLhBMrEeGPrOWgCMrVa4mLRCKN4VfZujeWZ64qU4s8daSqfoYpHMK8V3VsHadzx1hFIKPQ90veR5EB2YgO0eYUz9EtAjwXzf95GIOrUzJnCpNJG/fz9ctFS7xvZLaw8bXr+9sE=
 before_install:
   - "npm install -g bower"
+  - "npm install -g gulp"
   - "bower install"
+after_success:
+  - npm install
+  - bower install
+  - gulp build
+  - chmod a+x ./scripts/gh-pages-deploy.sh
+  - ./scripts/gh-pages-deploy.sh
