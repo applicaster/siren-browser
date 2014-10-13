@@ -9,10 +9,16 @@ then
   exit 0
 fi
 
+if [ ${TRAVIS_PULL_REQUEST} ]
+then
+  echo PR mode no deploy
+  exit 0
+fi
+
+echo deploying master to gh-pages
 
 rm -rf out || exit 0;
 mkdir out;
-node build.js
 ( cd out
  git init
  git config --global user.name "gavriguy"
