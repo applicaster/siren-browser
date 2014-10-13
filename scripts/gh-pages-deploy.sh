@@ -1,10 +1,10 @@
 #!/bin/bash
-currentBranch=`git rev-parse --abbrev-ref HEAD`
 
 echo deploy to ${GH_REF} gh-pages
 
-if [ "$currentBranch" != "master" ]
+if [ "${TRAVIS_BRANCH}" != "master" ]
 then
+  echo the current branch is ${TRAVIS_BRANCH}
   echo gh-pages can only be deployed from master
   exit 0
 fi
