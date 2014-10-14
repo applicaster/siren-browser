@@ -3,8 +3,8 @@ node_js:
   - "0.10"
 env:
   global:
-   - GH_REF=github.com/applicaster/siren-broswer.git
-   - secure: k9P/Ca9CeJUV7JEsevM+bCGNrW1ur8l9PHaAXrLhBMrEeGPrOWgCMrVa4mLRCKN4VfZujeWZ64qU4s8daSqfoYpHMK8V3VsHadzx1hFIKPQ90veR5EB2YgO0eYUz9EtAjwXzf95GIOrUzJnCpNJG/fz9ctFS7xvZLaw8bXr+9sE=
+   - GH_REF=github.com/applicaster/siren-browser.git
+   - secure: Kfq+4RB4vfTrG0Q1s6XlW2tN/YQZ0pP72NkWIRrxYWedXDwkRK51gk12pLpmVfPOKPAoFmS/5uUXYCvS+u1pf5IbHwQjBAgNIgmPkYfodKceIyAFNi/nnibu+XpODapGuEnCXEwIE1UfE2phBItuFxSeQovmHc7hR7+D4206zUA=
 before_install:
   - "npm install -g bower"
   - "npm install -g gulp"

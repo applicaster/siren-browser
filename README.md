@@ -1,7 +1,7 @@
 # Siren Browser
-[![Build Status](https://travis-ci.org/applicaster/siren-broswer.svg?branch=master)](https://travis-ci.org/applicaster/siren-broswer)
-[![Dependency Status](https://david-dm.org/applicaster/siren-broswer.svg)](https://david-dm.org/applicaster/siren-broswer)
-[![Coverage Status](https://img.shields.io/coveralls/applicaster/siren-broswer.svg)](https://coveralls.io/r/applicaster/siren-broswer?branch=master)
+[![Build Status](https://travis-ci.org/applicaster/siren-browser.svg?branch=master)](https://travis-ci.org/applicaster/siren-browser)
+[![Dependency Status](https://david-dm.org/applicaster/siren-browser.svg)](https://david-dm.org/applicaster/siren-browser)
+[![Coverage Status](https://img.shields.io/coveralls/applicaster/siren-browser.svg)](https://coveralls.io/r/applicaster/siren-browser?branch=master)
 
 Siren API Browser client for the web.
 
@@ -12,7 +12,7 @@ To have a production ready [Siren API](https://github.com/kevinswiber/siren) Bro
 
 ## Live demo
 
-[http://applicaster.github.io/siren-broswer/](http://applicaster.github.io/siren-broswer/)
+[http://applicaster.github.io/siren-browser/](http://applicaster.github.io/siren-browser/)
 
 ## Why build a new one?
 
