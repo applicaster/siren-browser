@@ -10,6 +10,7 @@ before_install:
   - "npm install -g gulp"
   - "bower install"
 after_success:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
   - npm install
   - bower install
   - gulp build
