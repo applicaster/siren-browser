@@ -10,6 +10,10 @@ describe "SirenBrowser.actionsUtils", ->
     it "have a default value param for enctype", ->
       data = actionsUtils.resolveFormContentType()
       expect(data).toBe 'application/x-www-form-urlencoded'
+    it "return enctype if enctype param was set", ->
+      someValue = 'Some Value'
+      data = actionsUtils.resolveFormContentType(someValue)
+      expect(data).toBe someValue
 
   describe "_proecessUrlecoded", ->
     it "returns the input variable", ->
@@ -63,3 +67,13 @@ describe "SirenBrowser.actionsUtils", ->
       data = 'key1=value&key2=value'
       result = url + '?' + data
       expect(actionsUtils._urlBuilderGET(url, data)).toBe(result)
+
+  describe "renderOptions", ->
+
+    it "use _urlBuilderGET on GET methods", ->
+      action = {method : 'GET'}
+      formData = {}
+      spyOn(actionsUtils, '_urlBuilderGET')
+      .andCallFake(->)
+      actionsUtils.renderOptions(action, formData)
+      expect(actionsUtils._urlBuilderGET).toHaveBeenCalled()
