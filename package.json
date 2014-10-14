@@ -40,6 +40,7 @@
     "fs": "0.0.2",
     "istanbul": "^0.3.2",
     "istanbul-instrumenter-loader": "^0.1.2",
-    "karma-coverage": "^0.2.6"
+    "karma-coverage": "^0.2.6",
+    "coveralls": "^2.11.2"
   }
 }
