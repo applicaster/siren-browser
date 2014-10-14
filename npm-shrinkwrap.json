@@ -1,5 +1,5 @@
 {
-  "name": "siren-broswer",
+  "name": "siren-browser",
   "version": "0.0.0",
   "dependencies": {
     "angular-ui-router": {
