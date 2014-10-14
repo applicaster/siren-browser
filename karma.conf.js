@@ -28,9 +28,19 @@ module.exports = function(config) {
   			loaders: [
           { test: /\.jade$/, loader: "jade" },
   				{ test: /\.coffee$/, loader: "coffee-loader" }
-  			]
+  			],
+        postLoaders: [ {
+                test: /\.coffee$/,
+                exclude: /(.*Spec\.coffee$|node_modules|bower_components)\//,
+                loader: 'istanbul-instrumenter'
+            } ]
   		}
   	},
+    coverageReporter: {
+      type : 'lcov',
+      dir : 'coverage/',
+      subdir: '.'
+    },
 
 
   	webpackServer: {
@@ -45,7 +55,8 @@ module.exports = function(config) {
     plugins: [
         require("karma-jasmine"),
         require("karma-webpack"),
-        require("karma-phantomjs-launcher")
+        require("karma-phantomjs-launcher"),
+        require("karma-coverage")
     ],
 
     // list of files to exclude
@@ -57,7 +68,6 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 
     preprocessors: {
-      '**/*.coffee': ['coffee'],
       '**/*.jade': ['jade'],
       '**/src/**/*Spec.coffee': ['webpack']
     },
@@ -66,7 +76,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port

@@ -1,4 +1,7 @@
-# Siren Browser [![Build Status](https://travis-ci.org/applicaster/siren-broswer.svg?branch=master)](https://travis-ci.org/applicaster/siren-broswer) [![Dependency Status](https://david-dm.org/applicaster/siren-broswer.svg)](https://david-dm.org/applicaster/siren-broswer)
+# Siren Browser
+[![Build Status](https://travis-ci.org/applicaster/siren-broswer.svg?branch=master)](https://travis-ci.org/applicaster/siren-broswer)
+[![Dependency Status](https://david-dm.org/applicaster/siren-broswer.svg)](https://david-dm.org/applicaster/siren-broswer)
+[![Coverage Status](https://img.shields.io/coveralls/applicaster/siren-broswer.svg)](https://coveralls.io/r/applicaster/siren-broswer?branch=coverege)
 
 Siren API Browser client for the web.
 
