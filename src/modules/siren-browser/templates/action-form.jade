@@ -12,7 +12,7 @@ form(ng-submit='actionFromCtrl.submit(action)')
           )
           | {{option.title}}
     div.form-group(ng-if="field.type != 'checkbox'  && field.type != 'radio'")
-      label {{field.title}}
+      label(ng-if="field.type != 'hidden'") {{field.title}}
       input.form-control(
         type="{{field.type}}",
         name="{{field.name}}",
