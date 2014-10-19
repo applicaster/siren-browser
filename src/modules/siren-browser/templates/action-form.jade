@@ -11,7 +11,7 @@ form(ng-submit='actionFromCtrl.submit(action)')
             ng-checked="option.selected"
           )
           | {{option.title}}
-    div.form-group(ng-if="field.type == 'text' || field.type == 'number'")
+    div.form-group(ng-if="field.type != 'checkbox'  && field.type != 'radio'")
       label {{field.title}}
       input.form-control(
         type="{{field.type}}",
