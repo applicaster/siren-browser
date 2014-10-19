@@ -49,3 +49,82 @@ describe "actionForm directive", ->
       .first().attr('checked')).toBe('checked')
     expect(ele.find('input[value="value2"]')
       .first().attr('checked')).toBeUndefined()
+
+  it "show field for all supported Siren input type\
+      - https://github.com/kevinswiber/siren#type-3\
+      expect radio checkbox and file types that have thier\
+      special UI implementation", ->
+    scope.$apply(->
+      scope.action =
+        "fields": [
+          {
+          "type": "hidden"
+          "name": "datetime1"
+          }
+          {
+          "type": "text"
+          "name": "text1"
+          }
+          {
+          "type": "search"
+          "name": "search1"
+          }
+          {
+          "type": "tel"
+          "name": "tel1"
+          }
+          {
+          "type": "email"
+          "name": "email1"
+          }
+          {
+          "type": "password"
+          "name": "password1"
+          }
+          {
+          "type": "datetime"
+          "name": "datetime1"
+          }
+          {
+          "type": "date"
+          "name": "date1"
+          }
+          {
+          "type": "month"
+          "name": "month1"
+          }
+          {
+          "type": "week"
+          "name": "week1"
+          }
+          {
+          "type": "time"
+          "name": "time1"
+          }
+          {
+          "type": "datetime-local"
+          "name": "datetime-local1"
+          }
+          {
+          "type": "number"
+          "name": "number1"
+          }
+          {
+          "type": "range"
+          "name": "range1"
+          }
+          {
+          "type": "color"
+          "name": "color1"
+          }
+          {
+          "type": "image"
+          "name": "image1"
+          }
+        ]
+    )
+    i = 0
+    while i < scope.action.fields.length
+      expect(ele.find('input[type="'+scope.action.fields[i].type+'"]')
+        .first().attr('name')).toBe(scope.action.fields[i].name)
+      i++
