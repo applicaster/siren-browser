@@ -22,4 +22,5 @@
   require "./controllers/showCtrl.coffee"
   require "./directives/actionForm.coffee"
   require "./services/entityResolver.coffee"
+  require "./services/sirenBrowserHttp.coffee"
 )()

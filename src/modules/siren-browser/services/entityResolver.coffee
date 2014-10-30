@@ -1,6 +1,6 @@
 (->
   require "../siren-browser.coffee"
-  entityResolver = ($rootScope, $http) ->
+  entityResolver = ($rootScope, sirenBrowserHttp) ->
     class EntityResolverClass
       constructor: () ->
         @cachedEntity = null
@@ -12,7 +12,7 @@
           entity
         else
           if (url)
-            $http.get(url)
+            sirenBrowserHttp.request({method: 'GET', url: url})
           else
             {data:{}}
     new EntityResolverClass
@@ -20,7 +20,7 @@
   angular.module('SirenBrowser')
     .service "entityResolver", [
       '$rootScope'
-      '$http'
+      'sirenBrowserHttp'
       entityResolver
     ]
 )()

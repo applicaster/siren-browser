@@ -7,6 +7,9 @@
           input.form-control#url(type='text', ng-model='showCtrl.url')
         .col-sm-1
           button.form-control.btn.btn-primary(ui-sref="siren-browser({url:showCtrl.url})") Go
+.row
+  .col-md-8.col-md-offset-2
+    alert(ng-repeat="alert in alerts", type="{{alert.type}}", close="alerts.splice(index, 1)") {{alert.msg}}
 #response.row
   .col-md-4
     #class(ng-show='showCtrl.class')

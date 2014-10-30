@@ -4,7 +4,7 @@
   actionFromCtrl = (
     $scope
     $element
-    $http
+    sirenBrowserHttp
     $state
     $rootScope
     entityResolver
@@ -19,7 +19,7 @@
       formData = $element.find("form").serialize()
       options = actionsUtils.renderOptions(action, formData)
       $rootScope.entityUrl = options.url
-      $http(options)
+      sirenBrowserHttp.request(options)
       .success((data) ->
         entityResolver.cacheEntity(data: data)
         url = $rootScope.entityUrl
@@ -27,14 +27,13 @@
           notify: true
           reload: true
         $state.go('siren-browser', {url: url}, options)
-      ).error (data, status) ->
-        console.log("error in get  status="+status)
+      )
     return
 
   angular.module("SirenBrowser").controller("actionFromCtrl", [
     '$scope'
     '$element'
-    '$http'
+    'sirenBrowserHttp'
     '$state'
     '$rootScope'
     'entityResolver'
