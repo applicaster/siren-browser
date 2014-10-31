@@ -1,6 +1,6 @@
-form(ng-submit='actionFromCtrl.submit(action)')
+form(ng-submit='actionFromCtrl.submit(action); $parent.$close()')
   div(ng-repeat="field in action.fields")
-    div.form-group(ng-if="field.type == 'checkbox'  || field.type == 'radio'")
+    div.form-group(ng-if="field.type == 'checkbox' || field.type == 'radio'")
       label {{field.title}}
       div.checkbox.radio(ng-repeat="option in field.value")
         label

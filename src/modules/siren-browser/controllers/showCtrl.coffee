@@ -2,6 +2,8 @@
   require "../siren-browser.coffee"
   require "./actionModalCtrl.coffee"
   showCtrl = ($scope, $stateParams, $rootScope, sirenEntity, $modal) ->
+    # Reset Alerts
+    $rootScope.alerts = []
     @url = $stateParams.url
     @actions = sirenEntity.data.actions
     @class = sirenEntity.data.class

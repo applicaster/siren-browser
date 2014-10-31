@@ -21,8 +21,10 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-    "angular": "~1.2.25",
+    "angular": "1.2.26",
     "angular-mocks": "~1.2.25",
-    "angular-bootstrap": "~0.11.2"
+    "angular-bootstrap": "~0.11.2",
+    "angular-busy": "4.1.0",
+    "bootstrap": "3.3.0"
   }
 }

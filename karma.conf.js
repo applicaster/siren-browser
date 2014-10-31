@@ -24,10 +24,14 @@ module.exports = function(config) {
 
     webpack: {
   		cache: true,
+      resolve: {
+          modulesDirectories: ["web_modules", "node_modules", "bower_components"]
+        },
   		module: {
   			loaders: [
           { test: /\.jade$/, loader: "jade" },
-  				{ test: /\.coffee$/, loader: "coffee-loader" }
+  				{ test: /\.coffee$/, loader: "coffee-loader" },
+          { test: /\.css$/, loader: "style-loader!css-loader" },
   			],
         postLoaders: [ {
                 test: /\.coffee$/,
