@@ -1,6 +1,11 @@
 ( ->
   require "angular-ui-router"
-  angular.module("SirenBrowser", ["ui.router"]).config [
+  require "angular-busy/dist/angular-busy.min.css"
+  require "angular-busy/dist/angular-busy.min.js"
+  require("angular-bootstrap/ui-bootstrap.js")
+  require("angular-bootstrap/ui-bootstrap-tpls.js")
+  
+  angular.module("SirenBrowser", ["ui.bootstrap", "ui.router", "cgBusy"]).config [
     "$stateProvider"
     "$urlRouterProvider"
     ($stateProvider, $urlRouterProvider) ->
